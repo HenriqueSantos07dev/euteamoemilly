@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eu te Amo Emilly</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="conteiner">
+    <div class="navbar">
+        <nav>
+          <a href="#amoreterno">Amor Eterno</a>
+          <a href="#diadopedido">07/08/23</a>
+          <a href="#galeria">Galeria</a>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/souzarlqq_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/mihhzpx__/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </nav>
+      </div>
+    <div id="amoreterno" class="amoreterno">
+      <h1>Seja bem Vindo(a)</h1>
+      <p>Hoje (07/08/24) celebramos um marco especial em nossa jornada: 1 ano de amor, companheirismo e momentos inesquecíveis. Este site é uma homenagem ao nosso primeiro ano juntos, um ano repleto de risos, aventuras e amor incondicional.</p>
+    </div>
+    <div id="diadopedido" class="diadopedido">
+      <h1>O dia mais especial da minha vida!</h1>
+      <p>Meu dia começou com uma mistura de excitação e nervosismo. Tinha planejado este momento por semanas e agora, finalmente, o dia havia chegado. Tomei um banho rápido, seguido de um café da manhã enquanto meus pensamentos estavam focados no grande pedido que faria. Na escola, compartilhei minha ideia com meus amigos. Eles adoraram e me deram algumas dicas valiosas para tornar o pedido ainda mais especial.
+      
+        <br>Ao se aproximar a hora, decidi falar com a mãe dela. Para minha felicidade, ela não só aprovou meu plano como também se ofereceu para ajudar. A ansiedade só aumentava. A mãe dela me ajudou a comprar flores e a coordenar os últimos detalhes. Saí da escola com a certeza de que a menina que eu queria pedir em namoro já sabia de tudo, mas eu precisava manter o elemento surpresa.<br>  No caminho para casa, encontrei as amigas dela. Elas sugeriram que eu dissesse que iria para um lugar distante e só voltaria no dia seguinte. Com isso, elas a levariam para a casa delas enquanto eu preparava a surpresa em sua casa. Achei a ideia excelente e assim fiz. Fingi que o pedido não aconteceria naquele dia e fui para casa. Recolhi todos os itens: doces, flores, uma cartinha e balões.<br> Cheguei à casa dela e preparei tudo meticulosamente. O tempo parecia passar mais devagar enquanto eu aguardava. Quando ela finalmente chegou, eu estava um misto de medo e ansiedade. Mas o momento em que ela entrou no quarto, a expressão de felicidade em seu rosto foi a melhor recompensa que eu poderia ter. Senti uma realização profunda e sabia que tinha feito algo significativo.<br>  Ela se aproximou, me abraçou e, nesse instante, tirei a aliança do bolso e perguntei: "Você aceita namorar comigo?" Com um sorriso radiante, ela respondeu: "Sim." Aquele foi o melhor dia da minha vida. Foi com ela, a primeira garota que amei verdadeiramente e pela qual me esforcei para fazer algo especial. Um momento inesquecível, para sempre gravado em minha memória.
+      </p>
+    </div>
+    <div id="galeria" class="galeria">
+      <h1>Galeria</h1>
+      <div class="galeria-container">
+        <div class="galeria-item">
+          <img src="imagem1.jpeg" alt="Descrição da Imagem 1">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem2.jpeg" alt="Descrição da Imagem 2">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem3.jpeg" alt="Descrição da Imagem 3">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem4.jpeg" alt="Descrição da Imagem 4">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem5.jpeg" alt="Descrição da Imagem 5">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem6.jpeg" alt="Descrição da Imagem 6">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem7.jpeg" alt="Descrição da Imagem 7">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem8.jpeg" alt="Descrição da Imagem 8">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem9.jpeg" alt="Descrição da Imagem 9">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem10.jpeg" alt="Descrição da Imagem 10">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem11.jpeg" alt="Descrição da Imagem 11">
+        </div>
+        <div class="galeria-item">
+          <img src="imagem12.jpeg" alt="Descrição da Imagem 12">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Exibir Imagens -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+    // Scroll suave ao clicar nos links da navegação
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Modal de exibição de imagens
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const images = document.querySelectorAll(".galeria-item img");
+    const closeBtn = document.querySelector(".modal .close");
+
+    images.forEach(img => {
+      img.addEventListener("click", function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+      });
+    });
+
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
